@@ -10,7 +10,7 @@ namespace TipCalculator {
 
 		public override void ViewDidLoad() {
 			base.ViewDidLoad();
-			// Perform any additional setup after loading the view, typically from a nib.
+			this.View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("background.png"));
 		}
 
 		public override void DidReceiveMemoryWarning() {
