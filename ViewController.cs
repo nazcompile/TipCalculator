@@ -11,12 +11,31 @@ namespace TipCalculator {
 		public override void ViewDidLoad() {
 			base.ViewDidLoad();
 			this.View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("background.png"));
+			this.textFieldBillTotal.BackgroundColor = UIColor.Clear;
+
+			var doneBarButton = new UIBarButtonItem(UIBarButtonSystemItem.Done, delegate {
+				this.textFieldBillTotal.ResignFirstResponder();
+			});
+
+			var keyboardToolbar = new UIToolbar();
+			keyboardToolbar.SizeToFit();
+			keyboardToolbar.Items = new UIBarButtonItem[] { doneBarButton };
+
+			this.textFieldBillTotal.InputAccessoryView = keyboardToolbar;
+
+		}
+
+		private void removeTextFieldKeyboard(UITextField textField) {
+			textField.ResignFirstResponder();
 		}
 
 		public override void DidReceiveMemoryWarning() {
 			base.DidReceiveMemoryWarning();
 			// Release any cached data, images, etc that aren't in use.
 		}
+
+
+
 	}
 }
 
