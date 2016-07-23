@@ -16,6 +16,10 @@ namespace TipCalculator
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel labelNumberOfPeople { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel labelTipPercentage { get; set; }
 
         [Outlet]
@@ -42,12 +46,13 @@ namespace TipCalculator
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField textFieldBillTotal { get; set; }
 
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITextField textFieldNumberOfPeople { get; set; }
-
         void ReleaseDesignerOutlets ()
         {
+            if (labelNumberOfPeople != null) {
+                labelNumberOfPeople.Dispose ();
+                labelNumberOfPeople = null;
+            }
+
             if (labelTipPercentage != null) {
                 labelTipPercentage.Dispose ();
                 labelTipPercentage = null;
@@ -81,11 +86,6 @@ namespace TipCalculator
             if (textFieldBillTotal != null) {
                 textFieldBillTotal.Dispose ();
                 textFieldBillTotal = null;
-            }
-
-            if (textFieldNumberOfPeople != null) {
-                textFieldNumberOfPeople.Dispose ();
-                textFieldNumberOfPeople = null;
             }
         }
     }
