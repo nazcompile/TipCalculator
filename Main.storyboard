@@ -17,43 +17,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tip Calculator" lineBreakMode="tailTruncation" minimumFontSize="10" id="10" translatesAutoresizingMaskIntoConstraints="NO" textAlignment="center" alpha="0.7" opaque="NO">
-                                <rect key="frame" x="52.5" y="36" width="215.5" height="42"/>
+                                <rect key="frame" x="30" y="37.5" width="270" height="42"/>
                                 <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="35"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bill Total: " lineBreakMode="tailTruncation" minimumFontSize="10" id="25" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="20" y="143" width="88" height="32"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bill Amount: " lineBreakMode="tailTruncation" minimumFontSize="10" id="25" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="20" y="137.5" width="96.5" height="19"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="16"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <constraints>
-                                    <constraint id="33" firstAttribute="width" constant="88"/>
-                                    <constraint id="34" firstAttribute="height" constant="32"/>
-                                </constraints>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Percentage to Tip:" lineBreakMode="tailTruncation" minimumFontSize="10" id="26" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="20" y="183" width="125" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tip Percentage:" lineBreakMode="tailTruncation" minimumFontSize="10" id="26" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="20" y="185.5" width="112" height="19"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="16"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <constraints>
-                                    <constraint id="37" firstAttribute="width" constant="125"/>
-                                    <constraint id="38" firstAttribute="height" constant="21"/>
-                                </constraints>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Number of People:" lineBreakMode="tailTruncation" minimumFontSize="10" id="27" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="20" y="220" width="140" height="21"/>
+                                <rect key="frame" x="20" y="243.5" width="130.5" height="19"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="16"/>
                                 <nil key="highlightedColor"/>
-                                <constraints>
-                                    <constraint id="41" firstAttribute="width" constant="140"/>
-                                    <constraint id="42" firstAttribute="height" constant="21"/>
-                                </constraints>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tip Total" lineBreakMode="tailTruncation" minimumFontSize="10" id="28" translatesAutoresizingMaskIntoConstraints="NO">
                                 <rect key="frame" x="20" y="350" width="67" height="21"/>
@@ -87,25 +75,120 @@
                                     <constraint id="53" firstAttribute="height" constant="21"/>
                                 </constraints>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.0" borderStyle="roundedRect" minimumFontSize="15" id="64" translatesAutoresizingMaskIntoConstraints="NO" clearsOnBeginEditing="YES" textAlignment="center" background="background.png" clearButtonMode="whileEditing" alpha="0.9">
+                                <rect key="frame" x="134.5" y="123.5" width="144.5" height="30"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="0.0" maxValue="100" id="69" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="133" y="180.5" width="146" height="31"/>
+                            </slider>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="70" translatesAutoresizingMaskIntoConstraints="NO" text="1" clearsOnBeginEditing="YES" clearButtonMode="whileEditing" background="background.png" alpha="0.8" textAlignment="center">
+                                <rect key="frame" x="157.5" y="236" width="30" height="30"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="1000" id="302" translatesAutoresizingMaskIntoConstraints="NO" value="1" alpha="0.8">
+                                <rect key="frame" x="195.5" y="236" width="94" height="29"/>
+                                <color key="tintColor" colorSpace="calibratedWhite" white="0.333333333333333" alpha="1"/>
+                            </stepper>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="100" lineBreakMode="tailTruncation" minimumFontSize="10" id="303" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="278" y="189.5" width="22" height="15.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="304" translatesAutoresizingMaskIntoConstraints="NO" text="%">
+                                <rect key="frame" x="301" y="189.5" width="11" height="14.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0.0" lineBreakMode="tailTruncation" minimumFontSize="10" id="305" translatesAutoresizingMaskIntoConstraints="NO" textAlignment="center">
+                                <rect key="frame" x="20" y="410.5" width="55" height="20.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="339" firstAttribute="width" constant="55"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0.0" lineBreakMode="tailTruncation" minimumFontSize="10" id="306" translatesAutoresizingMaskIntoConstraints="NO" textAlignment="center">
+                                <rect key="frame" x="110" y="410.5" width="57" height="20.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="342" firstAttribute="width" constant="57"/>
+                                </constraints>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0.0" lineBreakMode="tailTruncation" minimumFontSize="10" id="307" translatesAutoresizingMaskIntoConstraints="NO" textAlignment="center">
+                                <rect key="frame" x="188" y="407" width="112" height="26"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="345" firstAttribute="width" constant="112"/>
+                                    <constraint id="346" firstAttribute="height" constant="26"/>
+                                </constraints>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                         <constraints>
-                            <constraint id="21" firstItem="10" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16"/>
-                            <constraint id="22" firstItem="10" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX"/>
-                            <constraint id="31" firstItem="25" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="143"/>
-                            <constraint id="32" firstItem="25" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20"/>
-                            <constraint id="35" firstItem="26" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="183"/>
-                            <constraint id="36" firstItem="26" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20"/>
-                            <constraint id="39" firstItem="27" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="220"/>
-                            <constraint id="40" firstItem="27" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20"/>
                             <constraint id="43" firstItem="8bC-Xf-vdC" firstAttribute="bottom" secondItem="28" secondAttribute="bottom" constant="109"/>
                             <constraint id="44" firstItem="28" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20"/>
                             <constraint id="47" firstItem="8bC-Xf-vdC" firstAttribute="bottom" secondItem="29" secondAttribute="bottom" constant="109"/>
-                            <constraint id="48" firstItem="29" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="103"/>
-                            <constraint id="51" firstItem="8bC-Xf-vdC" firstAttribute="trailing" secondItem="30" secondAttribute="trailing" constant="20"/>
                             <constraint id="52" firstItem="8bC-Xf-vdC" firstAttribute="bottom" secondItem="30" secondAttribute="bottom" constant="109"/>
+                            <constraint id="337" firstItem="305" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20"/>
+                            <constraint id="338" firstItem="8bC-Xf-vdC" firstAttribute="bottom" secondItem="305" secondAttribute="bottom" constant="49"/>
+                            <constraint id="341" firstItem="8bC-Xf-vdC" firstAttribute="bottom" secondItem="306" secondAttribute="bottom" constant="49"/>
+                            <constraint id="344" firstItem="8bC-Xf-vdC" firstAttribute="bottom" secondItem="307" secondAttribute="bottom" constant="47"/>
+                            <constraint id="347" firstItem="30" firstAttribute="leading" secondItem="29" secondAttribute="trailing" constant="16"/>
+                            <constraint id="348" firstItem="307" firstAttribute="leading" secondItem="306" secondAttribute="trailing" constant="21"/>
+                            <constraint id="349" firstItem="306" firstAttribute="leading" secondItem="305" secondAttribute="trailing" constant="35"/>
+                            <constraint id="350" firstItem="29" firstAttribute="leading" secondItem="28" secondAttribute="trailing" constant="16"/>
+                            <constraint id="359" firstItem="27" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20"/>
+                            <constraint id="360" firstItem="70" firstAttribute="centerX" secondItem="27" secondAttribute="trailing" constant="22"/>
+                            <constraint id="361" firstItem="wfy-db-euE" firstAttribute="top" secondItem="70" secondAttribute="bottom" constant="214"/>
+                            <constraint id="362" firstItem="302" firstAttribute="centerX" secondItem="70" secondAttribute="trailing" constant="55"/>
+                            <constraint id="363" firstItem="wfy-db-euE" firstAttribute="top" secondItem="302" secondAttribute="bottom" constant="215"/>
+                            <constraint id="364" firstItem="26" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20"/>
+                            <constraint id="365" firstItem="27" firstAttribute="top" secondItem="26" secondAttribute="bottom" constant="39"/>
+                            <constraint id="366" firstItem="69" firstAttribute="centerX" secondItem="26" secondAttribute="trailing" constant="74"/>
+                            <constraint id="367" firstItem="302" firstAttribute="centerY" secondItem="69" secondAttribute="bottom" constant="40"/>
+                            <constraint id="368" firstItem="303" firstAttribute="leading" secondItem="69" secondAttribute="trailing" constant="1"/>
+                            <constraint id="369" firstItem="69" firstAttribute="leading" secondItem="26" secondAttribute="centerX" constant="59"/>
+                            <constraint id="374" firstItem="303" firstAttribute="leading" secondItem="69" secondAttribute="centerX" constant="72"/>
+                            <constraint id="375" firstItem="302" firstAttribute="top" secondItem="303" secondAttribute="bottom" constant="31"/>
+                            <constraint id="376" firstItem="304" firstAttribute="leading" secondItem="303" secondAttribute="centerX" constant="12"/>
+                            <constraint id="377" firstItem="302" firstAttribute="top" secondItem="304" secondAttribute="bottom" constant="32"/>
+                            <constraint id="378" firstItem="25" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20"/>
+                            <constraint id="379" firstItem="26" firstAttribute="top" secondItem="25" secondAttribute="bottom" constant="29"/>
+                            <constraint id="380" firstItem="64" firstAttribute="centerX" secondItem="25" secondAttribute="trailing" constant="90"/>
+                            <constraint id="381" firstItem="64" firstAttribute="leading" secondItem="25" secondAttribute="centerX" constant="66"/>
+                            <constraint id="382" firstItem="69" firstAttribute="centerY" secondItem="64" secondAttribute="bottom" constant="42"/>
+                            <constraint id="383" firstItem="8bC-Xf-vdC" firstAttribute="trailing" secondItem="64" secondAttribute="trailing" constant="41"/>
+                            <constraint id="391" firstItem="64" firstAttribute="centerY" secondItem="10" secondAttribute="bottom" constant="59"/>
+                            <constraint id="392" firstItem="10" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30"/>
+                            <constraint id="393" firstItem="8bC-Xf-vdC" firstAttribute="trailing" secondItem="10" secondAttribute="trailing" constant="20"/>
+                            <constraint id="394" firstItem="27" firstAttribute="top" secondItem="10" secondAttribute="centerY" constant="185"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textFieldBillTotal" destination="64" id="name-outlet-64"/>
+                        <outlet property="sliderTipPercentage" destination="69" id="name-outlet-69"/>
+                        <outlet property="textFieldNumberOfPeople" destination="70" id="name-outlet-70"/>
+                        <outlet property="stepperNumberOfPeople" destination="302" id="name-outlet-302"/>
+                        <outlet property="labelTipTotalValue" destination="305" id="name-outlet-305"/>
+                        <outlet property="labelTotalBillValue" destination="306" id="name-outlet-306"/>
+                        <outlet property="labelTotalPerPersonValue" destination="307" id="name-outlet-307"/>
+                        <outlet property="labelTipPercentage" destination="303" id="name-outlet-303"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
