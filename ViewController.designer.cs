@@ -50,6 +50,10 @@ namespace TipCalculator
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void updateTipPerentageValue (UIKit.UISlider sender);
 
+        [Action ("updateNumberOfPeopleValue:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void updateNumberOfPeopleValue (UIKit.UIStepper sender);
+
         void ReleaseDesignerOutlets ()
         {
             if (labelNumberOfPeople != null) {

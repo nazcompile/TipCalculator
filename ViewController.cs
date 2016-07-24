@@ -13,6 +13,7 @@ namespace TipCalculator {
 			this.View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("background.png"));
 
 			updateTipPerentageValue(sliderTipPercentage);
+			updateNumberOfPeopleValue(stepperNumberOfPeople);
 
 			var doneBarButton = new UIBarButtonItem(UIBarButtonSystemItem.Done, delegate {
 				this.textFieldBillTotal.ResignFirstResponder();
@@ -29,6 +30,10 @@ namespace TipCalculator {
 
 		private void removeTextFieldKeyboard(UITextField textField) {
 			textField.ResignFirstResponder();
+		}
+
+		partial void updateNumberOfPeopleValue(UIStepper sender) {
+			labelNumberOfPeople.Text = sender.Value.ToString();
 		}
 
 		partial void updateTipPerentageValue(UISlider sender) {
