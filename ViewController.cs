@@ -11,7 +11,8 @@ namespace TipCalculator {
 		public override void ViewDidLoad() {
 			base.ViewDidLoad();
 			this.View.BackgroundColor = UIColor.FromPatternImage(UIImage.FromFile("background.png"));
-			this.textFieldBillTotal.BackgroundColor = UIColor.Clear;
+
+			updateTipPerentageValue(sliderTipPercentage);
 
 			var doneBarButton = new UIBarButtonItem(UIBarButtonSystemItem.Done, delegate {
 				this.textFieldBillTotal.ResignFirstResponder();
@@ -21,12 +22,18 @@ namespace TipCalculator {
 			keyboardToolbar.SizeToFit();
 			keyboardToolbar.Items = new UIBarButtonItem[] { doneBarButton };
 
+			this.textFieldBillTotal.BackgroundColor = UIColor.Clear;
 			this.textFieldBillTotal.InputAccessoryView = keyboardToolbar;
 
 		}
 
 		private void removeTextFieldKeyboard(UITextField textField) {
 			textField.ResignFirstResponder();
+		}
+
+		partial void updateTipPerentageValue(UISlider sender) {
+			int sliderValue = (int) sender.Value;
+			labelTipPercentage.Text = sliderValue.ToString() + "%";
 		}
 
 		public override void DidReceiveMemoryWarning() {

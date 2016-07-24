@@ -46,6 +46,10 @@ namespace TipCalculator
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField textFieldBillTotal { get; set; }
 
+        [Action ("updateTipPerentageValue:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void updateTipPerentageValue (UIKit.UISlider sender);
+
         void ReleaseDesignerOutlets ()
         {
             if (labelNumberOfPeople != null) {
