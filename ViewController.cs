@@ -33,6 +33,7 @@ namespace TipCalculator {
 
 			this.textFieldBillTotal.BackgroundColor = UIColor.Clear;
 			this.textFieldBillTotal.InputAccessoryView = keyboardToolbar;
+
 		}
 
 		partial void updateNumberOfPeopleValue(UIStepper sender) {
@@ -49,13 +50,13 @@ namespace TipCalculator {
 
 		public void updateResultLabels() {
 			double totalTip = Math.Round((tipPercentage / 100) * billAmount, 2);
-			labelTipTotalValue.Text = totalTip.ToString();
+			labelTipTotalValue.Text = "£" + totalTip;
 
 			double totalBillAmount = totalTip + billAmount;
-			labelTotalBillValue.Text = totalBillAmount.ToString();
+			labelTotalBillValue.Text = "£" + totalBillAmount;
 
 			double billPerPerson = Math.Round(totalBillAmount / numberOfPeople, 2);
-			labelTotalPerPersonValue.Text = billPerPerson.ToString();
+			labelTotalPerPersonValue.Text = "£" + billPerPerson;
 		}
 
 		public override void DidReceiveMemoryWarning() {
