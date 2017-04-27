@@ -10,4 +10,4 @@ How does it work -
 
 
 
-![alt tag] (https://github.com/nazcompile/TipCalculator/blob/master/screenshots/auto_updates_results_3.png)
+![alt text](https://github.com/nazcompile/TipCalculator/blob/master/screenshots/auto_updates_results_3.png)
